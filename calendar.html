@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alamedas de Santa Ana</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    window.initSqlJsPromise = initSqlJs({ locateFile: file => `https://cdn.jsdelivr.net/npm/sql.js@1.10.2/dist/${file}` });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sql.js@1.10.2/dist/sql-wasm.js"></script>
+</head>
+<body>
+  <div class="shell">
+    
+  <aside class="sidebar">
+    <div class="brand"><div class="logo"></div> Alamedas de Santa Ana</div>
+    <div class="navgroup">
+      <h4>Páginas</h4>
+      <nav class="nav">
+        <a class="" href="index.html">Inicio</a>
+        <a class="active" href="calendar.html">Calendario</a>
+        <a class="" href="consulta.html">Consulta de Inquilinos</a>
+      </nav>
+    </div>
+  </aside>
+    <main class="content">
+      <div class="container">
+        
+  <div class="hero">
+    <h1>Calendario de Actividades</h1>
+    <p class="muted">Seleccione mes y año para ver los eventos. Haga clic en el título del evento para ver la descripción.</p>
+  </div>
+  <section class="card calendar">
+    <div class="controls">
+      <label>Mes <select id="mes"></select></label>
+      <label>Año <select id="anio"></select></label>
+      <button id="btnCargar">Mostrar</button>
+    </div>
+    <div class="grid cards" id="dow">
+      <div class="badge">Lunes</div><div class="badge">Martes</div><div class="badge">Miércoles</div>
+      <div class="badge">Jueves</div><div class="badge">Viernes</div><div class="badge">Sábado</div><div class="badge">Domingo</div>
+    </div>
+    <div class="grid" id="calGrid" style="grid-template-columns: repeat(7, 1fr)"></div>
+  </section>
+  <dialog id="dlg">
+    <header><h3 id="dlgTitle" style="margin:0"></h3></header>
+    <div class="content"><p id="dlgDate" class="muted" style="margin-top:0"></p><div id="dlgDesc"></div></div>
+    <div class="actions"><button onclick="document.getElementById('dlg').close()">Cerrar</button></div>
+  </dialog>
+ <footer style="text-align:center">© <span id="year"></span> Marlon Varela · Josué Navas · William Vásquez</footer>
+<script defer src="assets/home.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

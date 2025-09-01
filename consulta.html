@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alamedas de Santa Ana</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    window.initSqlJsPromise = initSqlJs({ locateFile: file => `https://cdn.jsdelivr.net/npm/sql.js@1.10.2/dist/${file}` });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sql.js@1.10.2/dist/sql-wasm.js"></script>
+</head>
+<body>
+  <div class="shell">
+    
+  <aside class="sidebar">
+    <div class="brand"><div class="logo"></div> Alamedas de Santa Ana</div>
+    <div class="navgroup">
+      <h4>Páginas</h4>
+      <nav class="nav">
+        <a class="" href="index.html">Inicio</a>
+        <a class="" href="calendar.html">Calendario</a>
+        <a class="active" href="consulta.html">Consulta de Inquilinos</a>
+      </nav>
+    </div>
+  </aside>
+    <main class="content">
+      <div class="container">
+        
+  <div class="hero">
+    <h1>Consulta de Estado de Pago</h1>
+    <p class="muted">Ingrese sus datos para validar identidad y consultar si su cuota de mantenimiento está al día.</p>
+  </div>
+  <form id="frm" class="card">
+    <div class="form-grid">
+      <div><label for="dpi">DPI</label><input id="dpi" name="dpi" placeholder="0000 00000 0000" required pattern="\d{4}\s?\d{5}\s?\d{4}"></div>
+      <div><label for="casa">Número de Casa</label><input id="casa" name="casa" type="number" min="1" required></div>
+      <div><label for="nombre">Primer Nombre</label><input id="nombre" name="nombre" required pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]{2,}"></div>
+      <div><label for="apellido">Primer Apellido</label><input id="apellido" name="apellido" required pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]{2,}"></div>
+      <div><label for="fnac">Fecha de Nacimiento</label><input id="fnac" name="fnac" type="date" required></div>
+    </div>
+    <div class="inline"><button type="submit">Consultar</button><span id="status" class="muted"></span></div>
+  </form>
+  <section class="card" style="margin-top:16px">
+    <h3>Historial de Pagos</h3>
+    <div class="form-grid">
+      <div><label>Desde <input type="month" id="desde"></label></div>
+      <div><label>Hasta <input type="month" id="hasta"></label></div>
+      <div><button id="btnHist" type="button">Buscar Historial</button></div>
+    </div>
+    <div id="hist"></div>
+  </section>
+ <footer style="text-align:center">© <span id="year"></span> Marlon Varela · Josué Navas · William Vásquez</footer>
+<script defer src="assets/home.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

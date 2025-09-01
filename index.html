@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alamedas de Santa Ana</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    window.initSqlJsPromise = initSqlJs({ locateFile: file => `https://cdn.jsdelivr.net/npm/sql.js@1.10.2/dist/${file}` });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sql.js@1.10.2/dist/sql-wasm.js"></script>
+</head>
+<body>
+  <div class="shell">
+    
+  <aside class="sidebar">
+    <div class="brand"><div class="logo"></div> Alamedas de Santa Ana</div>
+    <div class="navgroup">
+      <h4>Páginas</h4>
+      <nav class="nav">
+        <a class="active" href="index.html">Inicio</a>
+        <a class="" href="calendar.html">Calendario</a>
+        <a class="" href="consulta.html">Consulta de Inquilinos</a>
+      </nav>
+    </div>
+  </aside>
+    <main class="content">
+      <div class="container">
+        
+  <div class="hero">
+    <span class="badge">Proyecto No. 1/ Desarrollo Web/ HTML5/CSS3/SQLite</span>
+    <h1>Residencial Alamedas de Santa Ana</h1>
+    <p class="muted">Bienvenido, a tu Portal informativo : noticias, calendario de actividades y consulta de pagos.</p>
+  </div>
+  <div class="grid cards">
+    <section class="card">
+      <h3>Integrantes del Grupo</h3>
+      <div class="grid cards" style="align-items:stretch">
+        <figure class="card" style="text-align:center">
+          <img src="assets/marlon.png" alt="Marlon Isai Varela Marroquín" style="width:120px;height:120px;border-radius:999px;object-fit:cover;border:2px solid #e5e7eb;margin-bottom:8px">
+          <figcaption><strong>Marlon Isai Varela Marroquín</strong></figcaption>
+        </figure>
+        <figure class="card" style="text-align:center">
+          <img src="assets/josue.png" alt="Josué Fernando Navas Nájera" style="width:120px;height:120px;border-radius:999px;object-fit:cover;border:2px solid #e5e7eb;margin-bottom:8px">
+          <figcaption><strong>Josué Fernando Navas Nájera</strong></figcaption>
+        </figure>
+        <figure class="card" style="text-align:center">
+          <img src="assets/william.png" alt="William Natanael Vásquez Navichoc" style="width:120px;height:120px;border-radius:999px;object-fit:cover;border:2px solid #e5e7eb;margin-bottom:8px">
+          <figcaption><strong>William Natanael Vásquez Navichoc</strong></figcaption>
+          <figcaption><strong>0900 09 13357</strong></figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="card">
+      <h3>Descripción del Residencial</h3>
+      <p>“Alamedas de Santa Ana” es una comunidad residencial tranquila con áreas verdes, seguridad y espacios para convivir.</p>
+      <p class="muted">Ubicación: Santa Ana Peten, Peten, Guatemala.</p>
+      <div class="inline">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video del residencial" frameborder="0" allowfullscreen></iframe>
+        <img src="https://picsum.photos/seed/alamedas/300/170" alt="Residencial" style="border-radius:12px;border:1px solid #e5e7eb">
+      </div>
+    </section>
+    <section class="card">
+      <h3>Noticias recientes</h3>
+      <div id="newsList" class="grid"></div>
+    </section>
+  </div>
+   <footer style="text-align:center">© <span id="year"></span> Marlon Varela · Josué Navas · William Vásquez</footer>
+<script defer src="assets/home.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>
